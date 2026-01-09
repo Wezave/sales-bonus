@@ -43,6 +43,14 @@ function analyzeSalesData(data, options) {
         throw new Error('Некорректные входные данные');
     }
 
+    if (!Array.isArray(data.products) || data.products.length === 0) {
+        throw new Error('Некорректные входные данные');
+    }
+
+    if (!Array.isArray(data.purchase_records)) {
+        throw new Error('Некорректные входные данные');
+    }
+
     if (!options || typeof options !== 'object') {
         throw new Error('Чего-то не хватает');
     }
